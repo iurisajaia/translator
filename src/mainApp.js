@@ -5,7 +5,7 @@ import Header from "./components/header/Header";
 import Home from "./screens/home/Home";
 import SignIn from "./screens/auth/SignIn";
 import './App.css';
-import SignUpContainer from "./store/auth/SignUpContainer";
+import SignUpContainer from "./screens/auth/SignUp";
 import Footer from "./components/footer/Footer";
 import Words from "./screens/words/Words";
 import Profile from "./screens/profile/Profile";

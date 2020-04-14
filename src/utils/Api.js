@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const AppAPI = axios.create({
-    baseURL: process.env.REACT_APP_BASEURL, //https://paylix-6jqosv67oa-uc.a.run.app
+    baseURL: process.env.REACT_APP_BASEURL,
     headers: {
         common: {
             Accept: 'application/json',

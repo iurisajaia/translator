@@ -1,4 +1,7 @@
 import React , { Component } from 'react';
+import {connect} from "react-redux";
+import {selectUser} from "../../store/auth/auth.selector";
+import {SignUpNewUser} from "../../store/auth/auth.action";
 
 class SignUp extends Component{
 
@@ -49,4 +52,19 @@ class SignUp extends Component{
     }
 }
 
-export default SignUp;
+const mapStateToProps = state => {
+    return {
+        user : selectUser(state)
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        createNewUser: data => dispatch(SignUpNewUser(data)),
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(SignUp);
